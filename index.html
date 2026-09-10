@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENEM no Enira | C.E. Profª Enira Moraes Ribeiro</title>
+  <meta name="description" content="Plataforma independente de preparação para o ENEM dos estudantes do C.E. Profª Enira Moraes Ribeiro em Paranavaí-PR.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Barra do Topo -->
+  <div class="top-stripe"></div>
+
+  <!-- Relógio & Header -->
+  <header class="main-header">
+    <div class="container header-container">
+      
+      <div class="brand">
+        <a href="#inicio" class="brand-link">
+          <div class="shield-badge">
+            <span class="shield-half-red"></span>
+            <span class="shield-letter">E</span>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title"><strong>ENEM</strong> <small>no Enira</small></span>
+            <span class="brand-sub">Paranavaí — PR</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#estudar" class="nav-link">Estudar</a>
+        <a href="#redacao" class="nav-link">Redação</a>
+        <a href="#quizzes" class="nav-link">Quizzes</a>
+        <a href="#simulados" class="nav-link">Simulados</a>
+        <a href="#repertorios" class="nav-link">Repertórios</a>
+        <a href="#noticias" class="nav-link">Notícias</a>
+        <a href="#calendario" class="nav-link">Calendário</a>
+        <a href="#desempenho" class="btn-desempenho">Meu Desempenho</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" title="Alternar tema">🌙</button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Abrir menu">☰</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Relógio em Tempo Real & Localização -->
+  <div class="time-bar">
+    <div class="container time-container">
+      <span class="location-badge">📍 PARANAVAÍ — PR</span>
+      <div class="realtime-clock" id="clockDisplay">--:--:--</div>
+      <div class="realtime-date" id="dateDisplay">Carregando data...</div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-tag">PORTAL OFICIAL DE PREPARAÇÃO</div>
+          <h1 class="hero-title">Seu caminho para o <span>ENEM</span> começa aqui.</h1>
+          <p class="hero-desc">Estude, pratique e acompanhe sua evolução junto com o Enira.</p>
+          <div class="hero-buttons">
+            <a href="#estudar" class="btn btn-primary">COMEÇAR A ESTUDAR</a>
+            <a href="#redacao" class="btn btn-secondary">TREINAR REDAÇÃO</a>
+            <a href="#quizzes" class="btn btn-outline">FAZER UM QUIZ</a>
+          </div>
+        </div>
+
+        <!-- Card Perfil Local -->
+        <div class="hero-profile-card">
+          <div class="profile-header">
+            <h3>Perfil do Estudante</h3>
+            <span class="badge-level" id="userLevel">Iniciante</span>
+          </div>
+          <div id="profileBox">
+            <p id="welcomeMsg">Carregando perfil...</p>
+            <div class="profile-inputs" id="profileFormGroup">
+              <input type="text" id="userNameInput" placeholder="Digite seu nome..." class="form-input">
+              <button id="btnSaveProfile" class="btn btn-gold btn-sm">Salvar</button>
+            </div>
+          </div>
+          <div class="profile-stats-mini">
+            <div><strong id="miniStatsQuest">0</strong><small>Questões</small></div>
+            <div><strong id="miniStatsRed">0</strong><small>Redações</small></div>
+            <div><strong id="miniStatsSim">0</strong><small>Simulados</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HUB DE CARDS RÁPIDOS -->
+    <section class="container hub-section">
+      <div class="grid-hub">
+        <a href="#estudar" class="hub-card">
+          <span class="hub-icon">📚</span>
+          <h3>Estudos</h3>
+          <p>Conteúdos por áreas do conhecimento</p>
+        </a>
+        <a href="#redacao" class="hub-card">
+          <span class="hub-icon">✍️</span>
+          <h3>Redação</h3>
+          <p>Temas, estrutura e simulador</p>
+        </a>
+        <a href="#quizzes" class="hub-card">
+          <span class="hub-icon">🧠</span>
+          <h3>Quizzes</h3>
+          <p>Questões rápidas ilimitadas</p>
+        </a>
+        <a href="#simulados" class="hub-card">
+          <span class="hub-icon">📝</span>
+          <h3>Simulados</h3>
+          <p>Provas com tempo e relatórios</p>
+        </a>
+        <a href="#noticias" class="hub-card">
+          <span class="hub-icon">📰</span>
+          <h3>Notícias</h3>
+          <p>Atualizações do INEP e do ENEM</p>
+        </a>
+        <a href="#desempenho" class="hub-card">
+          <span class="hub-icon">📊</span>
+          <h3>Desempenho</h3>
+          <p>Sua evolução e pontuações</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTAGEM REGRESSIVA ENEM 2026 -->
+    <section class="container countdown-section">
+      <div class="section-title">
+        <h2>ENEM 2026</h2>
+        <p>Acompanhe o tempo restante para as provas presenciais</p>
+      </div>
+
+      <div class="countdown-grid">
+        <div class="card-countdown">
+          <div class="card-tag red">1º DIA DO ENEM</div>
+          <h3>08 de Novembro de 2026</h3>
+          <p>Linguagens, Ciências Humanas e Redação</p>
+          <div class="timer-box" id="timerDay1">
+            <div><span id="d1-days">00</span><small>Dias</small></div>
+            <div><span id="d1-hours">00</span><small>Horas</small></div>
+            <div><span id="d1-min">00</span><small>Min</small></div>
+            <div><span id="d1-sec">00</span><small>Seg</small></div>
+          </div>
+        </div>
+
+        <div class="card-countdown">
+          <div class="card-tag gold">2º DIA DO ENEM</div>
+          <h3>15 de Novembro de 2026</h3>
+          <p>Matemática e Ciências da Natureza</p>
+          <div class="timer-box" id="timerDay2">
+            <div><span id="d2-days">00</span><small>Dias</small></div>
+            <div><span id="d2-hours">00</span><small>Horas</small></div>
+            <div><span id="d2-min">00</span><small>Min</small></div>
+            <div><span id="d2-sec">00</span><small>Seg</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Horários das Provas -->
+      <div class="schedule-banner">
+        <h4>⏰ Horários das Provas (Horário de Brasília):</h4>
+        <ul>
+          <li><strong>Abertura dos portões:</strong> 12:00</li>
+          <li><strong>Fechamento dos portões:</strong> 13:00</li>
+          <li><strong>Início das provas:</strong> 13:30</li>
+          <li><strong>Término 1º dia:</strong> 19:00 | <strong>Término 2º dia:</strong> 18:30</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- LOCAL DE PROVA E INEP -->
+    <section class="container info-links-section">
+      <div class="info-box-proof">
+        <div class="proof-content">
+          <h3>📍 Consulte seu Local de Prova</h3>
+          <p>Seu local de prova individual será informado oficialmente pelo INEP no Cartão de Confirmação da Inscrição.</p>
+        </div>
+        <a href="https://enem.inep.gov.br/participante" target="_blank" rel="noopener noreferrer" class="btn btn-gold">CONSULTAR MEU LOCAL DE PROVA ↗</a>
+      </div>
+
+      <div class="official-links-block">
+        <h3>Canais Oficiais do ENEM e INEP</h3>
+        <div class="links-grid">
+          <a href="https://www.gov.br/inep/" target="_blank" class="official-link">Portal INEP ↗</a>
+          <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem" target="_blank" class="official-link">Página Oficial ENEM ↗</a>
+          <a href="https://enem.inep.gov.br/participante" target="_blank" class="official-link">Página do Participante ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÓDULO ESTUDAR -->
+    <section id="estudar" class="container content-section">
+      <div class="section-title">
+        <h2>Áreas do Conhecimento</h2>
+        <p>Resumos e mapas conceituais focados nas competências do exame</p>
+      </div>
+
+      <div class="search-bar-box">
+        <input type="text" id="studySearchInput" placeholder="Pesquisar por conteúdo (ex: Geometria, Funções, Vargas)..." class="form-input">
+      </div>
+
+      <div class="areas-grid" id="studyAreasGrid">
+        <!-- Renderizado via app.js -->
+      </div>
+    </section>
+
+    <!-- TREINO DE REDAÇÃO -->
+    <section id="redacao" class="container content-section">
+      <div class="section-title">
+        <h2>Treino de Redação</h2>
+        <p>Escreva. Argumente. Evolua.</p>
+      </div>
+
+      <div class="redacao-layout">
+        <div class="redacao-sidebar">
+          <button id="btnRandomTheme" class="btn btn-gold full-width">🎲 TEMA ALEATÓRIO</button>
+          
+          <div class="themes-filter-box">
+            <label for="themeCategorySelect">Categoria:</label>
+            <select id="themeCategorySelect" class="form-input">
+              <option value="TODAS">Todas as categorias</option>
+            </select>
+          </div>
+
+          <div class="themes-list" id="themesList">
+            <!-- Temas renderizados via redacao.js -->
+          </div>
+        </div>
+
+        <div class="redacao-editor-area">
+          <div class="active-theme-card" id="activeThemeCard">
+            <span class="badge-tag red" id="activeThemeCat">Tecnologia</span>
+            <h3 id="activeThemeTitle">Selecione um tema ao lado para começar</h3>
+            <div id="activeThemeTexts" class="support-texts-box"></div>
+          </div>
+
+          <div class="editor-box">
+            <div class="editor-toolbar">
+              <span>Cronômetro: <strong id="redTimer">00:00:00</strong></span>
+              <div>
+                <button id="btnStartTimer" class="btn btn-sm btn-outline">▶ Iniciar</button>
+                <button id="btnPauseTimer" class="btn btn-sm btn-outline">⏸ Pausar</button>
+              </div>
+            </div>
+
+            <textarea id="redTextarea" placeholder="Digite sua redação aqui respeitando o modelo dissertativo-argumentativo..." class="form-textarea"></textarea>
+
+            <div class="editor-footer">
+              <div class="counters">
+                <span>Palavras: <strong id="wordCount">0</strong></span>
+                <span>Caracteres: <strong id="charCount">0</strong></span>
+              </div>
+              <div class="editor-actions">
+                <button id="btnSaveRedacao" class="btn btn-secondary">Salvar Rascunho</button>
+                <button id="btnEvaluateRedacao" class="btn btn-gold">Finalizar e Avaliar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Relatório / Feedback -->
+          <div id="redacaoFeedbackBox" class="feedback-card hidden">
+            <h3>Feedback Estimado da Redação</h3>
+            <p class="disclaimer-note">⚠️ A avaliação apresentada é uma estimativa educacional baseada em parâmetros locais do navegador e não substitui a correção oficial do ENEM ou de um professor.</p>
+            <div class="score-display">
+              <span class="total-score" id="totalRedScore">0</span>
+              <small>/ 1000 Pontos</small>
+            </div>
+            <div class="competencies-grid" id="competenciesGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANCO DE REPERTOÓRIOS -->
+    <section id="repertorios" class="container content-section">
+      <div class="section-title">
+        <h2>Banco de Repertórios Socioculturais</h2>
+        <p>Citações, leis, obras e acontecimentos para fundamentar seus argumentos</p>
+      </div>
+
+      <div class="rep-search-box">
+        <input type="text" id="repSearchInput" placeholder="Buscar por filósofo, livro, lei ou tema..." class="form-input">
+      </div>
+
+      <div class="repertorios-grid" id="repertoriosGrid">
+        <!-- Renderizado via app.js -->
+      </div>
+    </section>
+
+    <!-- QUIZZES -->
+    <section id="quizzes" class="container content-section">
+      <div class="section-title">
+        <h2>Quiz Ilimitado</h2>
+        <p>Teste seus conhecimentos de forma rápida e prática</p>
+      </div>
+
+      <div class="quiz-container-box">
+        <div id="quizSetup" class="quiz-setup-card">
+          <h3>Configurar Partida</h3>
+          <div class="form-group">
+            <label>Área do Conhecimento:</label>
+            <select id="quizAreaSelect" class="form-input">
+              <option value="TODAS">Todas as Áreas</option>
+              <option value="Linguagens">Linguagens</option>
+              <option value="Humanas">Ciências Humanas</option>
+              <option value="Natureza">Ciências da Natureza</option>
+              <option value="Matemática">Matemática</option>
+            </select>
+          </div>
+          <button id="btnStartQuiz" class="btn btn-gold full-width">INICIAR QUIZ</button>
+        </div>
+
+        <div id="quizPlay" class="quiz-play-card hidden">
+          <div class="quiz-header">
+            <span id="quizAreaBadge" class="badge-tag">Área</span>
+            <span id="quizProgressText">Questão 1/5</span>
+          </div>
+          <h3 id="quizQuestionTitle" class="quiz-title-text">Enunciado aqui...</h3>
+          <div id="quizOptionsList" class="options-list"></div>
+          <div id="quizExplanation" class="explanation-box hidden"></div>
+          <div class="quiz-footer">
+            <button id="btnNextQuizQuestion" class="btn btn-gold hidden">PRÓXIMA QUESTÃO ➔</button>
+          </div>
+        </div>
+
+        <div id="quizResult" class="quiz-result-card hidden">
+          <h3>Resultado do Quiz</h3>
+          <div class="result-score-circle" id="quizScoreCircle">0%</div>
+          <p id="quizResultMsg">Desempenho salvo no seu perfil local!</p>
+          <button id="btnRestartQuiz" class="btn btn-primary">JOGAR NOVAMENTE</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMULADOS -->
+    <section id="simulados" class="container content-section">
+      <div class="section-title">
+        <h2>Simulados ENEM</h2>
+        <p>Provas configuradas para testar ritmo e gestão de tempo</p>
+      </div>
+
+      <div class="simulados-grid">
+        <div class="simulado-card">
+          <h3>Simulado Rápido</h3>
+          <p>10 Questões variadas de todas as áreas.</p>
+          <button class="btn btn-outline full-width btn-start-sim" data-count="10">INICIAR (10 Qs)</button>
+        </div>
+        <div class="simulado-card">
+          <h3>Simulado Intermediário</h3>
+          <p>20 Questões com cronômetro de prova.</p>
+          <button class="btn btn-secondary full-width btn-start-sim" data-count="20">INICIAR (20 Qs)</button>
+        </div>
+        <div class="simulado-card highlight">
+          <span class="badge-tag gold">COMPLETO</span>
+          <h3>Simulado ENEM</h3>
+          <p>45 Questões focadas para treino longo.</p>
+          <button class="btn btn-gold full-width btn-start-sim" data-count="45">INICIAR (45 Qs)</button>
+        </div>
+      </div>
+
+      <div id="simuladoActiveArea" class="simulado-active-box hidden">
+        <!-- Renderização do Simulado em Execução via simulados.js -->
+      </div>
+    </section>
+
+    <!-- NOTÍCIAS -->
+    <section id="noticias" class="container content-section">
+      <div class="section-title">
+        <h2>Notícias e Avisos ENEM</h2>
+        <p>Informaçoes oficiais do INEP, MEC e notícias institucionais</p>
+      </div>
+
+      <div class="noticias-grid" id="noticiasGrid">
+        <!-- Renderizado via noticias.js -->
+      </div>
+    </section>
+
+    <!-- CALENDÁRIO -->
+    <section id="calendario" class="container content-section">
+      <div class="section-title">
+        <h2>Calendário e Cronograma</h2>
+        <p>Principais marcos da edição 2026 do Exame Nacional</p>
+      </div>
+
+      <div class="timeline-box" id="timelineGrid">
+        <!-- Renderizado via calendario.js -->
+      </div>
+    </section>
+
+    <!-- DESEMPENHO -->
+    <section id="desempenho" class="container content-section">
+      <div class="section-title">
+        <h2>Meu Desempenho</h2>
+        <p>Estatísticas armazenadas localmente no seu dispositivo</p>
+      </div>
+
+      <div class="desempenho-dashboard">
+        <div class="dash-card">
+          <h4>Total de Questões</h4>
+          <strong id="dashTotalQuestions">0</strong>
+        </div>
+        <div class="dash-card">
+          <h4>Taxa de Acerto</h4>
+          <strong id="dashAccuracyRate">0%</strong>
+        </div>
+        <div class="dash-card">
+          <h4>Redações Salvas</h4>
+          <strong id="dashRedSaved">0</strong>
+        </div>
+        <div class="dash-card">
+          <h4>Nível Atual</h4>
+          <strong id="dashUserRank">Iniciante</strong>
+        </div>
+      </div>
+
+      <div class="dashboard-controls">
+        <button id="btnClearData" class="btn btn-danger-outline">Limpar Meus Dados Locais</button>
+      </div>
+    </section>
+
+    <!-- AVISO DE ISENÇÃO -->
+    <section class="container disclaimer-section">
+      <div class="disclaimer-box">
+        <p>📌 <strong>Aviso Importante:</strong> O <em>ENEM no Enira</em> é uma plataforma educacional independente e comunitária voltada para os estudantes do C.E. Profª Enira Moraes Ribeiro. O site não possui vínculo governamental direto nem substitui os canais oficiais do INEP ou MEC. Para inscrições, alteração de dados e consulta individual de resultados, acesse sempre a <a href="https://enem.inep.gov.br/participante" target="_blank">Página do Participante</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="shield-badge">
+          <span class="shield-half-red"></span>
+          <span class="shield-letter">E</span>
+        </div>
+        <div>
+          <h3>ENEM no Enira</h3>
+          <p>C.E. Profª Enira Moraes Ribeiro · Paranavaí – PR</p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#inicio">Início</a>
+        <a href="#estudar">Estudar</a>
+        <a href="#redacao">Redação</a>
+        <a href="#quizzes">Quizzes</a>
+        <a href="#simulados">Simulados</a>
+        <a href="#noticias">Notícias</a>
+      </div>
+
+      <div class="footer-legal">
+        <p>Desenvolvido exclusivamente para execução em GitHub Pages (HTML5/CSS3/JS Vanilla).</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Carregamento dos Scripts JavaScript -->
+  <script src="js/dados.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/redacao.js"></script>
+  <script src="js/simulados.js"></script>
+  <script src="js/noticias.js"></script>
+  <script src="js/calendario.js"></script>
+  <script src="js/desempenho.js"></script>
+</body>
+</html>
