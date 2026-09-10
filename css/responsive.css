@@ -1,0 +1,61 @@
+/* ==========================================================================
+   ENEM NO ENIRA — RESPONSIVIDADE E DISPOSITIVOS MÓVEIS
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .hero-container, .redacao-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .countdown-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-box-proof {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: #0B0B0B;
+    border-bottom: 1px solid var(--border-color);
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .timer-box span {
+    font-size: 20px;
+  }
+
+  .editor-footer {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
